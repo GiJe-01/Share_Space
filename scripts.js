@@ -1,7 +1,7 @@
 // Password verification
 function verifyPassword() {
     const password = document.getElementById('password').value;
-    if (password === 'your_password') { // ここにパスワードを設定してください
+    if (password === 'kakegawa.nishi') { // ここにパスワードを設定してください
         document.getElementById('password-prompt').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
         generateUniqueID();
