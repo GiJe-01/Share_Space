@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名掲示板</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="password-prompt">
+        <h2>パスワードを入力してください</h2>
+        <input type="password" id="password">
+        <button onclick="verifyPassword()">確認</button>
+    </div>
+    <div id="main-content" style="display:none;">
+        <header>
+            <h1>匿名掲示板</h1>
+        </header>
+        <main>
+            <aside>
+                <input type="text" id="search-thread" placeholder="スレッド検索">
+                <h2>スレッド一覧</h2>
+                <ul id="thread-list">
+                    <li onclick="selectThread('トップ')">トップ</li>
+                </ul>
+                <button onclick="createThread()">スレッド作成</button>
+            </aside>
+            <section>
+                <h2 id="current-thread-title">トップ</h2>
+                <div id="posts"></div>
+                <div id="post-container">
+                    <textarea id="new-post" placeholder="新しい投稿"></textarea>
+                    <button onclick="postMessage()">投稿</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script></body>
+</html>
